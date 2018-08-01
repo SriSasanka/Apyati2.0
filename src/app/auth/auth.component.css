@@ -1,4 +1,12 @@
-.nav-color {
+nav {
   color: #336458;
   font-weight: bold;
+  background-color: dimgrey;
+}
+@media (max-width: 768px) {
+  nav {
+    color: #336458;
+    font-weight: bold;
+    background-color: dimgrey;
+  }
 }

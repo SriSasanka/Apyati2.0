@@ -4,3 +4,9 @@
 h3,h6{
   color: crimson;
 }
+.wrapper {
+  height: 100vh;
+  background: url("../../../assets/images/Apyati_login.jpg") no-repeat center;
+  background-size: cover;
+
+}
