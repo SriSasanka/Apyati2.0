@@ -1,0 +1,16 @@
+.example-full-width {
+  width: 70%;
+}
+.wrapper {
+  height: 100vh;
+  background: url("../../../assets/images/Apyati_login.jpg") no-repeat center;
+  background-size: cover;
+
+}
+.btn-darkgreen {
+  background-color: #336458;
+  color: whitesmoke;
+}
+.label-darkgreen {
+  color: #336458;
+}
