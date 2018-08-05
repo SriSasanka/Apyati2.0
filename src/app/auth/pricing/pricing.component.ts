@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-pricing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private routes: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  SignupRedirect() {
+    //this.router.navigate(['/auth/signup'], {relativeTo: this.routes})
+  }
 }
