@@ -1,39 +1,42 @@
-<div class="wrapper img-fluid">
-  <div class="container-fluid mt-5" id="login">
+<div class="wrapper" id="background">
+  <div class="container mt-5" id="login">
+    <br>
     <div class="row mt-5" align="center">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <br>
         <form>
-          <div class="row" align="center" style="margin-top: 30%;">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <h3 class="label-darkgreen"><strong>User Login</strong></h3>
+          <div id="blur">
+            <div class="row" align="center">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 class="label-darkgreen"><strong>User Login</strong></h3>
+              </div>
             </div>
-          </div>
-          <br>
-          <div class="row" align="center">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Username">
-              </mat-form-field>
+            <br>
+            <div class="row" align="center">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Username" autocomplete="off">
+                </mat-form-field>
+              </div>
             </div>
-          </div>
-          <br>
-          <div class="row" align="center">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Password" type="password">
-              </mat-form-field>
+            <br>
+            <div class="row" align="center">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Password" type="password"  autocomplete="off">
+                </mat-form-field>
+              </div>
             </div>
-          </div>
-          <br>
-          <div class="row" align="center">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <button class="btn btn-darkgreen"
-                      style="background-color: #336458;"
-                      mat-raised-button>
-                Login
-              </button>
+            <br>
+            <div class="row" align="center">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <button class="btn btn-darkgreen"
+                        style="background-color: #336458;"
+                        mat-raised-button>
+                  Login
+                </button>
+              </div>
             </div>
           </div>
         </form>
