@@ -13,10 +13,8 @@ import { BillingDetailsComponent } from './billing-details/billing-details.compo
 import { BillingSummaryComponent } from './billing-summary/billing-summary.component';
 import { ReferralDetailsComponent } from './referral-details/referral-details.component';
 import { TestStatisticsComponent } from './test-statistics/test-statistics.component';
-import { AbnormalReportsComponent } from './abnormal-reports/abnormal-reports.component';
 import { RegisterPatientComponent } from './register-patient/register-patient.component';
 import { BillingComponent } from './billing/billing.component';
-import { SearchComponent } from './search/search.component';
 import { SearchPatientComponent } from './search-patient/search-patient.component';
 import { SearchBillComponent } from './search-bill/search-bill.component';
 import { ResultsEntryComponent } from './results-entry/results-entry.component';
@@ -63,10 +61,8 @@ const PAGES_COMPONENTS = [
     BillingSummaryComponent,
     ReferralDetailsComponent,
     TestStatisticsComponent,
-    AbnormalReportsComponent,
     RegisterPatientComponent,
     BillingComponent,
-    SearchComponent,
     SearchPatientComponent,
     SearchBillComponent,
     ResultsEntryComponent,
