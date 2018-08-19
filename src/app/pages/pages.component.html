@@ -1,99 +1,218 @@
 <!---->
-<mat-toolbar color="primary" class="example-toolbar">
-  <button mat-icon-button>
-    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-  </button>
-  <h1 class="example-app-name">Responsive App</h1>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon shake" matBadge="15" matBadgeColor="warn">
-    <i class="material-icons md-24 ">notifications_none</i>
-  </mat-icon>
-  <span class="example-icon">Itikala Sri Sasanka</span>
-  <mat-icon  class="example-icon" routerLink="/auth">
-    <i class="material-icons md-24">power_settings_new</i>
-  </mat-icon>
-</mat-toolbar>
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-               (closed)="events.push('close!')">
-    <button mat-button [matMenuTriggerFor]="Administration" style="width: 300px;text-align: left;">
-      Administration
-    </button>
-    <mat-menu #Administration="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="loginSecurity">Login & Security</button>
-      <button mat-menu-item [matMenuTriggerFor]="TariffsandLabs">Tariffs & Labs</button>
-      <button mat-menu-item [matMenuTriggerFor]="LabTestsProfiles">Lab Tests & Profiles</button>
-    </mat-menu>
-    <mat-menu #loginSecurity="matMenu">
-      <button mat-menu-item>Lab Details</button>
-      <button mat-menu-item>Screens Master</button>
-      <button mat-menu-item>Roles Master</button>
-      <button mat-menu-item>Login User Master</button>
-      <button mat-menu-item>Reset Password</button>
-      <button mat-menu-item>Migration Master</button>
-    </mat-menu>
-    <mat-menu #TariffsandLabs="matMenu">
-      <button mat-menu-item>Company</button>
-      <button mat-menu-item>Tariff</button>
-      <button mat-menu-item>Header Formatter</button>
-      <button mat-menu-item>Doctor Details</button>
-      <button mat-menu-item>External Lab Details</button>
-      <button mat-menu-item>Sample Collections</button>
-      <button mat-menu-item>Department</button>
-    </mat-menu>
-    <mat-menu #LabTestsProfiles="matMenu">
-      <button mat-menu-item>Age Master</button>
-      <button mat-menu-item>Test Group</button>
-      <button mat-menu-item>Sub Group</button>
-      <button mat-menu-item>Test Sample Type</button>
-      <button mat-menu-item>Method</button>
-      <button mat-menu-item>Test Timings</button>
-      <button mat-menu-item>Lab Test</button>
-      <button mat-menu-item>Test Profiles</button>
-      <button mat-menu-item>Demographics</button>
-      <button mat-menu-item>Report Template Internal</button>
-      <button mat-menu-item>Report Format</button>
-      <button mat-menu-item>Setup Master</button>
-      <button mat-menu-item>Report Doctors</button>
-    </mat-menu>
+<!--<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      &lt;!&ndash;<mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <h1 class="example-app-name">Responsive App</h1>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon shake" matBadge="15" matBadgeColor="warn" matTooltip="Notifications">
+          <i class="material-icons md-24 ">notifications_none</i>
+        </mat-icon>
+        <span class="example-icon">Itikala Sri Sasanka</span>
+        <mat-icon  class="example-icon" routerLink="/auth" matTooltip="Log out">
+          <i class="material-icons md-24">power_settings_new</i>
+        </mat-icon>
+      </mat-toolbar>&ndash;&gt;
+    </div>
+  </div>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+      <br>
+      <button mat-button [matMenuTriggerFor]="Administration" style="width: 300px;text-align: left;">
+        Administration
+      </button>
+      <mat-menu #Administration="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="loginSecurity">Login & Security</button>
+        <button mat-menu-item [matMenuTriggerFor]="TariffsandLabs">Tariffs & Labs</button>
+        <button mat-menu-item [matMenuTriggerFor]="LabTestsProfiles">Lab Tests & Profiles</button>
+      </mat-menu>
+      <mat-menu #loginSecurity="matMenu">
+        <button mat-menu-item routerLink="/pages/lab-details">Lab Details</button>
+        <button mat-menu-item>Screens Master</button>
+        <button mat-menu-item>Roles Master</button>
+        <button mat-menu-item>Login User Master</button>
+        <button mat-menu-item>Reset Password</button>
+        <button mat-menu-item>Migration Master</button>
+      </mat-menu>
+      <mat-menu #TariffsandLabs="matMenu">
+        <button mat-menu-item>Company</button>
+        <button mat-menu-item>Tariff</button>
+        <button mat-menu-item>Header Formatter</button>
+        <button mat-menu-item>Doctor Details</button>
+        <button mat-menu-item>External Lab Details</button>
+        <button mat-menu-item>Sample Collections</button>
+        <button mat-menu-item>Department</button>
+      </mat-menu>
+      <mat-menu #LabTestsProfiles="matMenu">
+        <button mat-menu-item>Age Master</button>
+        <button mat-menu-item>Test Group</button>
+        <button mat-menu-item>Sub Group</button>
+        <button mat-menu-item>Test Sample Type</button>
+        <button mat-menu-item>Method</button>
+        <button mat-menu-item>Test Timings</button>
+        <button mat-menu-item>Lab Test</button>
+        <button mat-menu-item>Test Profiles</button>
+        <button mat-menu-item>Demographics</button>
+        <button mat-menu-item>Report Template Internal</button>
+        <button mat-menu-item>Report Format</button>
+        <button mat-menu-item>Setup Master</button>
+        <button mat-menu-item>Report Doctors</button>
+      </mat-menu>
 
-    <br>
-    <button mat-button [matMenuTriggerFor]="Laboratory" style="width: 300px;text-align: left;">
-      Laboratory
-    </button>
-    <mat-menu #Laboratory="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="BillingReporting">
-        Billing & Reporting
+      <br>
+      <button mat-button [matMenuTriggerFor]="Laboratory" style="width: 300px;text-align: left;">
+        Laboratory
       </button>
-    </mat-menu>
-    <mat-menu #BillingReporting="matMenu">
-      <button mat-menu-item>Register Patient</button>
-      <button mat-menu-item>Billing</button>
-      <button mat-menu-item>Search Patient</button>
-      <button mat-menu-item>Search Bill</button>
-      <button mat-menu-item>Results Entry</button>
-      <button mat-menu-item>PrintEdit Reports</button>
-    </mat-menu>
-    <br>
-    <button mat-button [matMenuTriggerFor]="MISReports" style="width: 300px;text-align: left;">
-      MIS Reports
-    </button>
-    <mat-menu #MISReports="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="GeneralReports">
-        General Reports
+      <mat-menu #Laboratory="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="BillingReporting">
+          Billing & Reporting
+        </button>
+      </mat-menu>
+      <mat-menu #BillingReporting="matMenu">
+        <button mat-menu-item>Register Patient</button>
+        <button mat-menu-item>Billing</button>
+        <button mat-menu-item>Search Patient</button>
+        <button mat-menu-item>Search Bill</button>
+        <button mat-menu-item>Results Entry</button>
+        <button mat-menu-item>PrintEdit Reports</button>
+      </mat-menu>
+      <br>
+      <button mat-button [matMenuTriggerFor]="MISReports" style="width: 300px;text-align: left;">
+        MIS Reports
       </button>
-    </mat-menu>
-    <mat-menu #GeneralReports="matMenu">
-      <button mat-menu-item>Daily Cash Book</button>
-      <button mat-menu-item>Billing Details</button>
-      <button mat-menu-item>Billing Summary</button>
-      <button mat-menu-item>Referral Details</button>
-      <button mat-menu-item>Test Statistics</button>
-      <button mat-menu-item>Abnormal Reports</button>
-    </mat-menu>
+      <mat-menu #MISReports="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="GeneralReports">
+          General Reports
+        </button>
+      </mat-menu>
+      <mat-menu #GeneralReports="matMenu">
+        <button mat-menu-item>Daily Cash Book</button>
+        <button mat-menu-item>Billing Details</button>
+        <button mat-menu-item>Billing Summary</button>
+        <button mat-menu-item>Referral Details</button>
+        <button mat-menu-item>Test Statistics</button>
+        <button mat-menu-item>Abnormal Reports</button>
+      </mat-menu>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: rgba(142,142,142,0.09);height: 100vh;">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>-->
+<nav class="navbar navbar-expand-xs navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl navbar-dark   fixed-top">
+  <button mat-icon-button (click)="snav.toggle()"><mat-icon style="color: white;">menu</mat-icon></button>
+  <a class="navbar-brand nav-color" href="#">Apyati</a>
+  <button class="navbar-toggler " type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color: black"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse " id="navbarsDefault">
+    <ul class="navbar-nav ml-auto mr-5">
+      <li class="nav-item pr-3" >
+          <mat-icon class="example-icon shake" matBadge="15" matBadgeColor="warn" style="color: white;" matTooltip="Notifications">
+            <i class="material-icons md-24 ">notifications_none</i>
+          </mat-icon>
+
+      </li>
+      <li class="nav-item pr-3" >
+        <span class="example-icon" style="color: white;">Itikala Sri Sasanka</span>
+      </li>
+      <li class="nav-item pr-3" >
+        <mat-icon  class="example-icon" routerLink="/auth" matTooltip="Log out" style="color: white;">
+          <i class="material-icons md-24">power_settings_new</i>
+        </mat-icon>
+      </li>
+    </ul>
+  </div>
+</nav>
+<mat-sidenav-container class="example-sidenav-container"
+                       [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+  <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+               [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-nav-list>
+      <button mat-button [matMenuTriggerFor]="Administration" style="width: 300px;text-align: left;">
+        Administration
+      </button>
+      <mat-menu #Administration="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="loginSecurity">Login & Security</button>
+        <button mat-menu-item [matMenuTriggerFor]="TariffsandLabs">Tariffs & Labs</button>
+        <button mat-menu-item [matMenuTriggerFor]="LabTestsProfiles">Lab Tests & Profiles</button>
+      </mat-menu>
+      <mat-menu #loginSecurity="matMenu">
+        <button mat-menu-item routerLink="/pages/lab-details" (click)="snav.toggle()">Lab Details</button>
+        <button mat-menu-item (click)="snav.toggle()">Screens Master</button>
+        <button mat-menu-item (click)="snav.toggle()">Roles Master</button>
+        <button mat-menu-item (click)="snav.toggle()">Login User Master</button>
+        <button mat-menu-item (click)="snav.toggle()">Reset Password</button>
+        <button mat-menu-item (click)="snav.toggle()">Migration Master</button>
+      </mat-menu>
+      <mat-menu #TariffsandLabs="matMenu">
+        <button mat-menu-item (click)="snav.toggle()">Company</button>
+        <button mat-menu-item (click)="snav.toggle()">Tariff</button>
+        <button mat-menu-item (click)="snav.toggle()">Header Formatter</button>
+        <button mat-menu-item (click)="snav.toggle()">Doctor Details</button>
+        <button mat-menu-item (click)="snav.toggle()">External Lab Details</button>
+        <button mat-menu-item (click)="snav.toggle()">Sample Collections</button>
+        <button mat-menu-item (click)="snav.toggle()">Department</button>
+      </mat-menu>
+      <mat-menu #LabTestsProfiles="matMenu">
+        <button mat-menu-item (click)="snav.toggle()">Age Master</button>
+        <button mat-menu-item (click)="snav.toggle()">Test Group</button>
+        <button mat-menu-item (click)="snav.toggle()">Sub Group</button>
+        <button mat-menu-item (click)="snav.toggle()">Test Sample Type</button>
+        <button mat-menu-item (click)="snav.toggle()">Method</button>
+        <button mat-menu-item (click)="snav.toggle()">Test Timings</button>
+        <button mat-menu-item (click)="snav.toggle()">Lab Tests</button>
+        <button mat-menu-item (click)="snav.toggle()">Test Profiles</button>
+        <button mat-menu-item (click)="snav.toggle()">Demographics</button>
+        <button mat-menu-item (click)="snav.toggle()">Report Template Internal</button>
+        <button mat-menu-item (click)="snav.toggle()">Report Format</button>
+        <button mat-menu-item (click)="snav.toggle()">Setup Master</button>
+        <button mat-menu-item (click)="snav.toggle()">Report Doctors</button>
+      </mat-menu>
+
+      <br>
+      <button mat-button [matMenuTriggerFor]="Laboratory" style="width: 300px;text-align: left;">
+        Laboratory
+      </button>
+      <mat-menu #Laboratory="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="BillingReporting">
+          Billing & Reporting
+        </button>
+      </mat-menu>
+      <mat-menu #BillingReporting="matMenu">
+        <button mat-menu-item (click)="snav.toggle()">Register Patient</button>
+        <button mat-menu-item (click)="snav.toggle()">Billing</button>
+        <button mat-menu-item (click)="snav.toggle()">Search Patient</button>
+        <button mat-menu-item (click)="snav.toggle()">Search Bill</button>
+        <button mat-menu-item (click)="snav.toggle()">Results Entry</button>
+        <button mat-menu-item (click)="snav.toggle()">PrintEdit Reports</button>
+      </mat-menu>
+      <br>
+      <button mat-button [matMenuTriggerFor]="MISReports" style="width: 300px;text-align: left;">
+        MIS Reports
+      </button>
+      <mat-menu #MISReports="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="GeneralReports">
+          General Reports
+        </button>
+      </mat-menu>
+      <mat-menu #GeneralReports="matMenu">
+        <button mat-menu-item (click)="snav.toggle()">Daily Cash Book</button>
+        <button mat-menu-item (click)="snav.toggle()">Billing Details</button>
+        <button mat-menu-item (click)="snav.toggle()">Billing Summary</button>
+        <button mat-menu-item (click)="snav.toggle()">Referral Details</button>
+        <button mat-menu-item (click)="snav.toggle()">Test Statistics</button>
+        <button mat-menu-item (click)="snav.toggle()">Abnormal Reports</button>
+      </mat-menu>
+    </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content style="background-color: #8e8e8e;height: 100vh;">
+  <mat-sidenav-content>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

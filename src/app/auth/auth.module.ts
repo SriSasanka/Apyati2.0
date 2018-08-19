@@ -14,6 +14,7 @@ import {
 import {SignupComponent} from './signup/signup.component';
 import {ScheduledemoComponent} from './scheduledemo/scheduledemo.component';
 import {ContactComponent} from './contact/contact.component';
+import {CommonModule} from '@angular/common';
 
 const AUTH_COMPONENTS = [
   AuthComponent,
@@ -33,7 +34,8 @@ const AUTH_COMPONENTS = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    CommonModule
   ],
   declarations: [
     ...AUTH_COMPONENTS,

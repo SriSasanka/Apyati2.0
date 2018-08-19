@@ -14,6 +14,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'lab-details',
+        loadChildren: '../pages/lab-details/lab-details.module#LabDetailsModule'
       }
     ]
   }

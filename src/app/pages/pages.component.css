@@ -1,13 +1,16 @@
 nav {
   color: #336458;
   font-weight: bold;
-  background-color: dimgrey;
+  background-color: #673ab7;
 }
 @media (max-width: 768px) {
   nav {
     color: #336458;
     font-weight: bold;
-    background-color: dimgrey;
+    background-color: #673ab7;
+  }
+  .example-spacer {
+    flex: 0 0 auto;
   }
 }
 .example-icon {
