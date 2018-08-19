@@ -8,7 +8,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule} from '@angular/material';
 import {CommonModule} from '@angular/common';
-
 @NgModule({
   declarations: [
     AppComponent,
